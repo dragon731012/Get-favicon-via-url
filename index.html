@@ -1,14 +1,14 @@
-<button class="button1" onclick="settandf();" align="center">import from website</button>
+<button id="button1" class="button1" onclick="settandf();" align="center">import from website</button>
 <input id='url1' class='url' placeholder='favicon url' type='text'/>
 <input id='title' class='title' placeholder='website title' type='text'/>
    
 <style>
     .button1{
         position: absolute;
-        height:5%;
-        width: auto;
+        height:50px;
+        width: 100px;
         top: 0px;
-        right: 50%;
+        left: 0px;
     }
     .url{
         position: absolute;
@@ -29,6 +29,10 @@
 </style>
 
 <script>
+var buttonwidth=button1.style.width;
+var buttonpos=screen.width/2-buttonwidth/2;
+button1.style.left = buttonpos+"px";
+   
 var fontsize1=2560/screen.width*8;
 url1.style.fontSize = fontsize1+"px";
 var fontsize2=2560/screen.width*8;
