@@ -1,10 +1,11 @@
-<link id="favicon" rel="icon"
-          href="https://t1.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://uv-test-4.onrender.com"
-          sizes="16x16">
 <script>
-  var url=prompt("url to cloak with");
-  if (url.includes("https://")==false){
+var url=prompt("url");
+const favicon=document.querySelector('[rel=icon]');
+
+if (url.includes("https://")==false){
     url="https://"+url;
-  var url="https://www.google.com/s2/favicons?domain="+url;
-  favicon.setAttribute("href",url); 
+}
+url="https://t1.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url="+url;      
+    
+favicon.href=url;
 </script>
