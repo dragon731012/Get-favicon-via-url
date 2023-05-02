@@ -1,3 +1,4 @@
+<button onclick="settandf();">import from website</button>
 <input id='url1' class='url' placeholder='favicon url' type='text'/>
 <input id='title' class='title' placeholder='website title' type='text'/>
    
@@ -24,9 +25,25 @@ url1.style.fontSize = fontsize1+"px";
 var fontsize2=2560/screen.width*8;
 title.style.fontSize = fontsize2+"px";
   
+   
+function setfavicon(url2){
+   (function() {
+       var link=document.querySelector("link[rel*='icon']") || document.createElement('link');
+       link.type='image/x-icon';
+       link.rel='shortcut icon';
+       link.href=url2;
+       document.getElementsByTagName('head')[0].appendChild(link);
+   })();
+}   
+   
+function settandf(){
 var url=prompt("url");
-document.title=url;
-    
+var originalurl=url;
+   
+function settitle(){
+   document.title=originalurl;
+}
+   
 const favicon=document.querySelector('[rel=icon]');
 
 if (url.includes("https://")==false){
@@ -34,14 +51,9 @@ if (url.includes("https://")==false){
 }
 
 url="https://t1.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url="+url;
+   
 document.cookie="icon="+url+"; expires=Thu, 18 Dec 9013 12:00:00 UTC";
 
-(function() {
-    var link=document.querySelector("link[rel*='icon']") || document.createElement('link');
-    link.type='image/x-icon';
-    link.rel='shortcut icon';
-    link.href=url;
-    document.getElementsByTagName('head')[0].appendChild(link);
-})();
-    
+setfavicon(url); 
+}
 </script>
