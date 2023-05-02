@@ -1,7 +1,10 @@
+<link id="favicon" rel="icon"
+          href=""
+          sizes="16x16">
 <script>
   var url=prompt("url to cloak with");
   if (url.includes("https://")==false){
     url="https://"+url;
   var url="https://www.google.com/s2/favicons?domain="+url;
-  fav.href=url;
+  favicon.setAttribute("href",url); 
 </script>
