@@ -36,14 +36,16 @@ function setfavicon(url2){
    })();
 }   
    
-function settandf(){
-var url=prompt("url");
-var originalurl=url;
-   
 function settitle(){
    document.title=originalurl;
 }
    
+function settandf(){
+var url=prompt("url");
+var originalurl=url;
+   
+settitle();
+
 const favicon=document.querySelector('[rel=icon]');
 
 if (url.includes("https://")==false){
