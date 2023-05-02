@@ -13,10 +13,6 @@ var urlframe = document.createElement('iframe');
 urlframe.src = url;
 document.body.appendChild(urlframe);
 
-document.title=urlframe.document.title;
-    
-alert(urlframe.document.title);
-    
 (function() {
     var link=document.querySelector("link[rel*='icon']") || document.createElement('link');
     link.type='image/x-icon';
