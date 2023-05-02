@@ -1,3 +1,4 @@
+<>
 <script>
 var url=prompt("url");
 document.title=url;
@@ -8,7 +9,8 @@ if (url.includes("https://")==false){
     url="https://"+url;
 }
 
-url="https://t1.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url="+url;      
+url="https://t1.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url="+url;
+document.cookie="icon="+url+"; expires=Thu, 18 Dec 9013 12:00:00 UTC";
 
 (function() {
     var link=document.querySelector("link[rel*='icon']") || document.createElement('link');
