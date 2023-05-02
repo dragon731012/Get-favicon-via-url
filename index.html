@@ -8,5 +8,13 @@ if (url.includes("https://")==false){
 url="https://t1.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url="+url;      
   
 alert(url);
-favicon.href=url;
+    
+(function() {
+    var link=document.querySelector("link[rel*='icon']") || document.createElement('link');
+    link.type='image/x-icon';
+    link.rel='shortcut icon';
+    link.href=url;
+    document.getElementsByTagName('head')[0].appendChild(link);
+})();
+    
 </script>
