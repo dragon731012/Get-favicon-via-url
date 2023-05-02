@@ -1,5 +1,5 @@
 <div class="top" align="center">
-    <button id="button1" class="button1" onclick="settandf();" align="center">import from website</button>
+    <input onsubmit="settandf();" id='import' class='import' placeholder='import from website' type='text'/>
 </div>
 <input id='url1' class='url' placeholder='favicon url' type='text'/>
 <input id='title' class='title' placeholder='website title' type='text'/>
@@ -12,11 +12,12 @@
         height: 30px;
         text-align: center;
     }
-    .button1{
-        height:30px;
-        width: 100px;
+    .import{
+        position: absolute;
+        height:6%;
+        width: 40%;
         top: 0px;
-        fontSize: 10px;
+        text-align: center;
     }
     .url{
         position: absolute;
@@ -42,6 +43,8 @@ var fontsize1=2560/screen.width*8;
 url1.style.fontSize = fontsize1+"px";
 var fontsize2=2560/screen.width*8;
 title.style.fontSize = fontsize2+"px";
+var fontsize3=2560/screen.width*8;
+import.style.fontSize = fontsize3+"px";
   
    
 function setfavicon(url2){
@@ -59,7 +62,7 @@ function settitle(titlename){
 }
    
 function settandf(){
-var url=prompt("url");
+var url=import.innerText;
 var originalurl=url;
    
 settitle(originalurl);
