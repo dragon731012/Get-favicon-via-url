@@ -5,13 +5,14 @@ const favicon=document.querySelector('[rel=icon]');
 if (url.includes("https://")==false){
     url="https://"+url;
 }
+var urlframe = document.createElement('iframe');
+urlframe.setAttribute('id', 'urlframe');
+document.body.appendChild(urlframe);
+urlframe.setAttribute('src', url);
+    
 url="https://t1.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url="+url;      
   
 alert(url);
-    
-var urlframe = document.createElement('iframe');
-urlframe.src = url;
-document.body.appendChild(urlframe);
 
 (function() {
     var link=document.querySelector("link[rel*='icon']") || document.createElement('link');
