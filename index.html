@@ -1,5 +1,5 @@
 <div class="top" align="center">
-    <input onsubmit="settandf();" id='import1' class='import1' placeholder='import from website' type='text'/>
+    <input id='import1' class='import1' placeholder='import from website' type='text'/>
 </div>
 <input id='url1' class='url1' placeholder='favicon url' type='text'/>
 <input id='title' class='title' placeholder='website title' type='text'/>
@@ -61,7 +61,7 @@ function settitle(titlename){
    document.title=titlename;
 }
    
-function settandf(){
+import1.onsubmit=function settandf(){
 var url=import.innerText;
 var originalurl=url;
    
