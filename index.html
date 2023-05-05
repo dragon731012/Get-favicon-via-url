@@ -107,14 +107,17 @@ var favicon=document.getElementById('url1').value;
            
 if (imported==''){
     document.title=title2;
-       
+    document.cookie='title2='+title2+'; expires=Thu, 18 Dec 9013 12:00:00 UTC';
+            
     var t = document.querySelector('head');
     var f = document.createElement('link');
     f.setAttribute('rel','shortcut icon');
     f.setAttribute('href',favicon);
     t.appendChild(f);
+    document.cookie='favicon='+favicon+'; expires=Thu, 18 Dec 9013 12:00:00 UTC';
             
     alert('done!');
+    window.location.reload(1);
 }
             
 ">
