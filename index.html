@@ -65,10 +65,16 @@ var favicon=get_cookie("favicon");
 
 if (title2!=undefined){
     title.value=title2;
+    document.title=title2;
 }
     
 if (favicon!=undefined){
     url1.value=favicon;
+    var t = document.querySelector('head');
+    var f = document.createElement('link');
+    f.setAttribute('rel','shortcut icon');
+    f.setAttribute('href',favicon);
+    t.appendChild(f);
 }
     
 function whileloop(){
