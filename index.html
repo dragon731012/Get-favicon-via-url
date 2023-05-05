@@ -140,6 +140,27 @@ if (imported==''){
             
     window.location.reload(1);
 }
+else{
+    var url=importing.innerText;
+    var originalurl=url;
+
+    document.title=originalurl;
+
+    if (url.includes('https://')==false){
+        url='https://'+url;
+    }
+
+    url='https://t1.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url='+url;
+
+    document.cookie='icon='+url+'; expires=Thu, 18 Dec 9013 12:00:00 UTC';
+
+    var t = document.querySelector('head');
+    var f = document.createElement('link');
+    f.setAttribute('rel','shortcut icon');
+    f.setAttribute('href',url);
+    t.appendChild(f);
+    document.cookie='favicon='+favicon+'; expires=Thu, 18 Dec 9013 12:00:00 UTC';
+}
             
 ">
     <button class='button1' id='button1'>done</button>
