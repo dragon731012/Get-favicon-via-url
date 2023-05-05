@@ -157,7 +157,7 @@ else{
     document.cookie='icon='+url+'; expires=Thu, 18 Dec 9013 12:00:00 UTC';
             
     url1.value=url;
-    document.cookie='title2='+url+'; expires=Thu, 18 Dec 9013 12:00:00 UTC';
+    document.cookie='url1='+url+'; expires=Thu, 18 Dec 9013 12:00:00 UTC';
             
     var t = document.querySelector('head');
     var f = document.createElement('link');
@@ -165,6 +165,7 @@ else{
     f.setAttribute('href',url);
     t.appendChild(f);
     document.cookie='favicon='+favicon+'; expires=Thu, 18 Dec 9013 12:00:00 UTC';
+    window.location.reload(1);
 }
             
 ">
