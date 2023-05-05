@@ -59,7 +59,22 @@
 </style>
 
 <script>
-
+function get_cookie(cookie_name) { const value = "; " + document.cookie; const parts = value.split("; " + cookie_name + "="); if (parts.length === 2) return parts.pop().split(";").shift(); } 
+var title2=get_cookie("title2");
+var favicon=get_cookie("favicon");
+    
+if (title2!=undefined){
+    alert("hi");
+    title.innerText=title2;
+}
+    
+if (favicon!=undefined){
+    alert("hi2");
+    url1.innerText=favicon;
+}
+    
+    
+    
 var fontsize1=2560/screen.width*8;
 url1.style.fontSize = fontsize1+"px";
 var fontsize2=2560/screen.width*8;
@@ -97,20 +112,6 @@ function setfavicon(favicon){
        document.getElementsByTagName('head')[0].appendChild(link);
    })();
 }
-
-function get_cookie(cookie_name) { const value = "; " + document.cookie; const parts = value.split("; " + cookie_name + "="); if (parts.length === 2) return parts.pop().split(";").shift(); } 
-var title2=get_cookie("title2");
-var favicon=get_cookie("favicon");
-    
-if (title2!=undefined){
-    alert("hi");
-    title.innerText=title2;
-}
-    
-if (favicon!=undefined){
-    alert("hi2");
-    url1.innerText=favicon;
-}
 </script>
 
 <a onclick="
@@ -131,6 +132,8 @@ if (imported==''){
     document.cookie='favicon='+favicon+'; expires=Thu, 18 Dec 9013 12:00:00 UTC';
             
     alert('done!');
+            
+    window.location.reload(1);
 }
             
 ">
