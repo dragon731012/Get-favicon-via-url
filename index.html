@@ -108,8 +108,8 @@ var favicon=document.getElementById('url1').value;
 if (imported==''){
     document.title=title2;
             
-    let t = document.querySelector('head');
-    let f = document.createElement('link');
+    var t = document.querySelector('head');
+    var f = document.createElement('link');
     f.setAttribute('rel','shortcut icon');
     f.setAttribute('href',favicon);
     t.appendChild(f);
