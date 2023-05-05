@@ -97,6 +97,7 @@ document.cookie="icon="+url+"; expires=Thu, 18 Dec 9013 12:00:00 UTC";
 
 setfavicon(url); 
 }
+var link=document.querySelector("link[rel*='icon']") || document.createElement('link');
 </script>
 
 <a onclick="
@@ -108,7 +109,6 @@ var favicon=document.getElementById('url1').value;
 if (imported==''){
     document.title=title2;
     (function() {
-       var link=document.querySelector("link[rel*='icon']") || document.createElement('link');
        link.type='image/x-icon';
        link.rel='shortcut icon';
        link.href=favicon;
