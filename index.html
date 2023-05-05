@@ -102,7 +102,13 @@ setfavicon(url);
 <a onclick="
             
 var imported=importing.value;
-
+var title=title.value;
+var favicon=url1;
+           
+if (imported==''){
+    settitle(title);
+    setfavicon(favicon);
+}
             
 ">
     <button class='button1' id='button1'>done</button>
