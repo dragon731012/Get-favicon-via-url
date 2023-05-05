@@ -145,6 +145,8 @@ else{
     var originalurl=url;
 
     document.title=originalurl;
+    title.value=originalurl;
+    document.cookie='title2='+originalurl+'; expires=Thu, 18 Dec 9013 12:00:00 UTC';
 
     if (url.includes('https://')==false){
         url='https://'+url;
@@ -153,7 +155,10 @@ else{
     url='https://t1.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url='+url;
 
     document.cookie='icon='+url+'; expires=Thu, 18 Dec 9013 12:00:00 UTC';
-
+            
+    url1.value=url;
+    document.cookie='title2='+url+'; expires=Thu, 18 Dec 9013 12:00:00 UTC';
+            
     var t = document.querySelector('head');
     var f = document.createElement('link');
     f.setAttribute('rel','shortcut icon');
