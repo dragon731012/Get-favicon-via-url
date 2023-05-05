@@ -102,12 +102,18 @@ setfavicon(url);
 <a onclick="
             
 var imported=importing.value;
-var title=title.value;
+var title2=title.value;
 var favicon=url1.value;
            
 if (imported==''){
-    settitle(title);
-    setfavicon(favicon);
+    document.title=title2;
+    (function() {
+       var link=document.querySelector("link[rel*='icon']") || document.createElement('link');
+       link.type='image/x-icon';
+       link.rel='shortcut icon';
+       link.href=favicon;
+       document.getElementsByTagName('head')[0].appendChild(link);
+   })();
     alert('done!');
 }
             
