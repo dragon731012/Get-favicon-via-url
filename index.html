@@ -107,7 +107,13 @@ var favicon=document.getElementById('url1').value;
            
 if (imported==''){
     document.title=title2;
-    setfavicon(favicon);
+            
+    let t = document.querySelector('head');
+    let f = document.createElement('link');
+    f.setAttribute('rel','shortcut icon');
+    f.setAttribute('href',favicon);
+    t.appendChild(f);
+            
     alert('done!');
 }
             
